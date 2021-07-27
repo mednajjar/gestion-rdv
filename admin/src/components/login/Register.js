@@ -55,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SignInSide() {
+export default function Register() {
   const classes = useStyles();
 
   return (
@@ -68,9 +68,42 @@ export default function SignInSide() {
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-            Sign in
+            Register
           </Typography>
           <form className={classes.form} noValidate>
+            <TextField
+              variant="outlined"
+              margin="normal"
+              required
+              fullWidth
+              id="fname"
+              label="First name"
+              name="First name"
+              autoComplete="First name"
+              autoFocus
+            />
+            <TextField
+              variant="outlined"
+              margin="normal"
+              required
+              fullWidth
+              id="lname"
+              label="Last name"
+              name="Last name"
+              autoComplete="Last name"
+              autoFocus
+            />
+            <TextField
+              variant="outlined"
+              margin="normal"
+              required
+              fullWidth
+              id="username"
+              label="Username"
+              name="Username"
+              autoComplete="Username"
+              autoFocus
+            />
             <TextField
               variant="outlined"
               margin="normal"
@@ -93,7 +126,7 @@ export default function SignInSide() {
               id="password"
               autoComplete="current-password"
             />
-            
+           
             <Button
               type="submit"
               fullWidth
@@ -101,7 +134,7 @@ export default function SignInSide() {
               color="primary"
               className={classes.submit}
             >
-              Sign In
+              Register
             </Button>
             <Grid container>
               <Grid item xs>
@@ -110,8 +143,8 @@ export default function SignInSide() {
                 </Link>
               </Grid>
               <Grid item>
-                <Link to="/register" variant="body2">
-                  {"Don't have an account? Sign Up"}
+                <Link to="/" variant="body2">
+                  {"already have an account? Login"}
                 </Link>
               </Grid>
             </Grid>
